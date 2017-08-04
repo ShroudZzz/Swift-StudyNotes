@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:SwiftLearn.xcodeproj">
+      location = "self:Swift_Basics.xcodeproj">
    </FileRef>
 </Workspace>

@@ -1,15 +1,15 @@
 //
-//  SwiftLearnTests.swift
-//  SwiftLearnTests
+//  Swift_BasicsTests.swift
+//  Swift_BasicsTests
 //
-//  Created by VermouthC on 2017/7/31.
+//  Created by VermouthC on 2017/8/4.
 //  Copyright © 2017年 VermouthC. All rights reserved.
 //
 
 import XCTest
-@testable import SwiftLearn
+@testable import Swift_Basics
 
-class SwiftLearnTests: XCTestCase {
+class Swift_BasicsTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

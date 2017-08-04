@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E1087A051F2F455500F5856B"
-               BuildableName = "SwiftLearn.app"
-               BlueprintName = "SwiftLearn"
-               ReferencedContainer = "container:SwiftLearn.xcodeproj">
+               BlueprintIdentifier = "E18D2B181F346BC300F5CE8E"
+               BuildableName = "Swift_Basics.app"
+               BlueprintName = "Swift_Basics"
+               ReferencedContainer = "container:Swift_Basics.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,30 +32,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E1087A191F2F455600F5856B"
-               BuildableName = "SwiftLearnTests.xctest"
-               BlueprintName = "SwiftLearnTests"
-               ReferencedContainer = "container:SwiftLearn.xcodeproj">
+               BlueprintIdentifier = "E18D2B2C1F346BC300F5CE8E"
+               BuildableName = "Swift_BasicsTests.xctest"
+               BlueprintName = "Swift_BasicsTests"
+               ReferencedContainer = "container:Swift_Basics.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E1087A241F2F455600F5856B"
-               BuildableName = "SwiftLearnUITests.xctest"
-               BlueprintName = "SwiftLearnUITests"
-               ReferencedContainer = "container:SwiftLearn.xcodeproj">
+               BlueprintIdentifier = "E18D2B371F346BC300F5CE8E"
+               BuildableName = "Swift_BasicsUITests.xctest"
+               BlueprintName = "Swift_BasicsUITests"
+               ReferencedContainer = "container:Swift_Basics.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E1087A051F2F455500F5856B"
-            BuildableName = "SwiftLearn.app"
-            BlueprintName = "SwiftLearn"
-            ReferencedContainer = "container:SwiftLearn.xcodeproj">
+            BlueprintIdentifier = "E18D2B181F346BC300F5CE8E"
+            BuildableName = "Swift_Basics.app"
+            BlueprintName = "Swift_Basics"
+            ReferencedContainer = "container:Swift_Basics.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E1087A051F2F455500F5856B"
-            BuildableName = "SwiftLearn.app"
-            BlueprintName = "SwiftLearn"
-            ReferencedContainer = "container:SwiftLearn.xcodeproj">
+            BlueprintIdentifier = "E18D2B181F346BC300F5CE8E"
+            BuildableName = "Swift_Basics.app"
+            BlueprintName = "Swift_Basics"
+            ReferencedContainer = "container:Swift_Basics.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E1087A051F2F455500F5856B"
-            BuildableName = "SwiftLearn.app"
-            BlueprintName = "SwiftLearn"
-            ReferencedContainer = "container:SwiftLearn.xcodeproj">
+            BlueprintIdentifier = "E18D2B181F346BC300F5CE8E"
+            BuildableName = "Swift_Basics.app"
+            BlueprintName = "Swift_Basics"
+            ReferencedContainer = "container:Swift_Basics.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

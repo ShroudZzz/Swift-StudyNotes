@@ -1,14 +1,14 @@
 //
-//  SwiftLearnUITests.swift
-//  SwiftLearnUITests
+//  Swift_BasicsUITests.swift
+//  Swift_BasicsUITests
 //
-//  Created by VermouthC on 2017/7/31.
+//  Created by VermouthC on 2017/8/4.
 //  Copyright © 2017年 VermouthC. All rights reserved.
 //
 
 import XCTest
 
-class SwiftLearnUITests: XCTestCase {
+class Swift_BasicsUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
