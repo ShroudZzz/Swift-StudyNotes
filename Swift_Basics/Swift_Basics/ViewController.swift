@@ -128,8 +128,11 @@ class ViewController: UIViewController {
            // 编译出错 OC 中可以  Zzz
        }
  */
-    func controlBool( ) -> <#return type#> {
-        <#function body#>
+    func controlBool( ){
+        let i = 0
+        if i == 1 {
+            // OK
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
