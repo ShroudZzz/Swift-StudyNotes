@@ -24,7 +24,7 @@ class ViewController: UIViewController {
      (1)type annotation 表示可以存储对应的类型
      注: 很少需要写类型标注。声明常量或者变量的时候赋了一个初始值，Swift可以推断出这个常量或者变量的类型
      */
-    var welcomeMessage: String = ""
+    var welcomeMessage: String = "Welcome Sunshine"
     
     /**
      section one --> 输出
@@ -127,13 +127,66 @@ class ViewController: UIViewController {
        if i{
            // 编译出错 OC 中可以  Zzz
        }
- */
+    */
     func controlBool( ){
         let i = 0
         if i == 1 {
             // OK
         }
     }
+    
+    /**
+     section one --> 元组(tuples)
+     (1)元组把多个值组合成一个复合值.元组内的值是任意类型
+     (2)可以在定义元组的时候给单个元素命名
+     */
+    let http404Error = (404,"Not Found");
+    let http200Status = (statusCode: 200, description: "OK")
+    //将一个元组的内容分解单独的常量和变量
+    //如果只需要一部分元组值,分解的时候可以吧忽略的部分用下划线(_)标记
+    //可以通过下标来访问元组中的单个元素 从0开始
+    func decompose() {
+        let (statusCode,statusMessage) = http404Error
+        print("The StatusCode is \(statusCode)")
+        print("The StatusMessage is \(statusMessage)")
+        
+        let (justTheStatusCode,_) = http404Error
+        print("The StatusCode is \(justTheStatusCode)")
+        
+        print("The StatusCode is \(http404Error.0)")
+        print("The StatusCOde is \(http200Status.statusCode)")
+    }
+    
+    /**
+     section one --> 可选类型(optionals)
+     (1) 使用可选类型处理值可能确实的状况
+     (2) 可选类型表示 有值 x 或者 没有值
+     (3) 可以给可选变量赋值为nil ,表示他没有值.但是 nil 不可以给费可选的常量和变量赋值(OC 区别)
+     (4) 声明一个可选类型但是没有赋值,会自动设置为nil(OC 区别)
+     */
+    
+    func stringToInt() {
+        let possibleNumber = "123"
+        let convertedNumber = Int(possibleNumber) //Int() 构造器 String -> Int  返回值是一个可选类型 字符串可能转换为Int 也可能不会
+        
+        var serverResponseCode: Int? = 404 //表示变量serverResponseCode 包含一个可选的Int值 404
+        serverResponseCode = nil //现在它不包含值
+    }
+    
+    /**
+     section one --> if语句以及强制解析
+     (1) 使用if 和nil 盘算一个可选值是否包含值
+     (2) 确定可选类型包含值,可以在可选的名字后面加一个感叹号(!)来获取值  这叫强制解析
+     */
+    func compareOptionals() {
+        let possibleNumber = "123"
+        let convertedNumber = Int(possibleNumber)
+        if  convertedNumber != nil{
+            print("convertedNumber contains integer value")
+            print("convertedNumber contains integer value of \(convertedNumber!)")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
