@@ -175,8 +175,8 @@ class ViewController: UIViewController {
     
     /**
      section one --> if语句以及强制解析
-     (1) 使用if 和nil 盘算一个可选值是否包含值
-     (2) 确定可选类型包含值,可以在可选的名字后面加一个感叹号(!)来获取值  这叫强制解析
+     (1) 使用if 和nil 判断一个可选值是否包含值
+     (2) 确定(可选类型 一定有值)可选类型包含值,可以在可选的名字后面加一个感叹号(!)来获取值(否则 运行出错)  这叫强制解析
      */
     func compareOptionals() {
         let possibleNumber = "123"
@@ -186,6 +186,81 @@ class ViewController: UIViewController {
             print("convertedNumber contains integer value of \(convertedNumber!)")
         }
     }
+    
+    /**
+     section one --> 可选绑定(optional binding)
+     (1)  使用可选绑定 来判断可选类型是否包含值,如果包含就把值赋给一个临时常量或者变量
+     (2)  包含多个可选绑定或者多个布尔条件在一个if语句里,使用逗号分开.只要任意一个可选绑定的值为nil,或者布尔值为false,则整条语句都为false
+     */
+    func optionalBinding() {
+        let possibleNumber = "123"
+        if let actualNumber = Int(possibleNumber) {
+            print("actualNumber is \(actualNumber))")
+        }
+        
+        
+        if let firstNumber = Int("4") {
+            if let secondNumber = Int("42") {
+                if firstNumber < secondNumber && secondNumber < 100 {
+                    print("\(firstNumber) < \(secondNumber) < 100")
+                }
+            }
+        }
+    }
+    
+    /**
+     section one --> 隐式解析可选类型
+     (1) 可选类型确定总会有值,可以使用(!)声明一个隐式解析可选类型
+     (2) 隐式解析可选类型当做普通的可选类型进行判断
+     (3) 可选绑定中使用隐式解析可选类型来检查并解析它的值
+     */
+    
+    func implicitlyUnwrappedOptionals(){
+        let possibleString: String? = "An optional string ."
+        let forcedString: String = possibleString! //使用! 强制解析取值
+        
+        let assumedString: String! = "An implicitly unwrapped optional string."
+        let implicitString: String = assumedString //不需要感叹号
+        
+        if assumedString != nil {
+            print(assumedString)
+        }
+        
+        if let definiteString = assumedString {
+            print(definiteString)
+        }
+    }
+    
+    /**
+     section one --> 错误处理(error handing)
+     (1)  处理程序执行中可能会遇到的错误条件
+     (2)  一个函数可以通过在声明中添加throws关键词来抛出错误消息。当你的函数能抛出错误消息时, 你应该在表达式中前置try关键词。
+     */
+    func canThrowAnError() throws {
+        //该函数可能抛出错误
+    }
+    
+    func invoke(){
+        do{
+            try canThrowAnError()
+            //没有错无出现
+        }catch{
+            //错误抛出
+        }
+    }
+    
+    /**
+     section one --> 断言
+     (1) 判断一个条件是否为真
+     (2) 断言条件为false的时候 断言被触发,终止应用
+     */
+    
+    func assertFunc() {
+        let age = -3
+        assert(age >= 0,"A person age cannot be less than zero")
+    }
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
