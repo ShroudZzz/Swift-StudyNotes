@@ -153,9 +153,61 @@ class ViewController: UIViewController {
         
     }
 
+    
+    //practice->尾随闭包
+    func seporateString(string:String ,handler:(_ str1:Character, _ str2:Character)->Void) -> Bool {
+        if string.startIndex<string.endIndex {
+            let str1 = string[string.startIndex]
+            let str2 = string[string.endIndex]
+            handler(str1,str2)
+            return true
+        }
+        return false
+    }
+    
+    func invoke() {
+        //调用尾随闭包
+        let result =  seporateString(string: "Hello") { (str1, str2) -> Void in
+            print(str1)
+            print(str2)
+        }
+        print("invoke \(result) !")
+    }
+    //practice->逃逸闭包
+    var functionArray:[()->Void] = []
+    func doSomethings(_ paramClosures:@escaping () -> Void){
+        functionArray.append(paramClosures)
+    }
+    func invokeEscapingClosures(){
+        //调用函数
+       doSomethings { 
+           print("Chen")
+        
+        }
+        
+        //调用逃逸闭包
+        for item in functionArray {
+           item()
+        }
+    }
+    
+    func auto_colsures() {
+        //practice->自动闭包
+        var tempString:String = "你的名字"
+        let makeString = { tempString = "chen" }
+        
+        print(tempString)
+        
+        //直到调用
+        makeString()
+        
+        print(tempString)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
 
 
